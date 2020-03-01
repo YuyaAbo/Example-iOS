@@ -3,5 +3,5 @@
 target 'Example-iOS' do
   use_frameworks!
 
-  pod 'Alamofire', '~> 4.0'
+  pod 'Alamofire', '~> 5.0'
 end
