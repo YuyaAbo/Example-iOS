@@ -1,7 +1,6 @@
 #!/bin/sh
 
 git checkout origin/master
-git checkout -b update-cocoapods-`date "+%F"`
 
 pod update
 
@@ -10,7 +9,7 @@ then
   # git commit
   git add Podfile.lock
   #git commit -m 'Update CocoaPods dependences'
-  git push origin HEAD
+  #git push origin HEAD
 else
   echo "No changes."
 fi
