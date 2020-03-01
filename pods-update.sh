@@ -1,5 +1,9 @@
 #!/bin/sh
 
+git fetch
+git branch
+git log
+
 pod update
 
 if [[ `git status --porcelain --untracked-files=no` ]]; 
