@@ -12,7 +12,10 @@ jobs:
     - name: Switch Xcode version
       run: sudo xcode-select -s /Applications/Xcode_11.app
     - name: Update CocoaPods dependences
-      run: sh pods-update.sh
+      run: |
+        pwd
+        ls
+        sh pods-update.sh
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v2
       with:
