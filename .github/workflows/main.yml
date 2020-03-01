@@ -19,4 +19,4 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         title: 'Update CocoaPods dependences'
         base: master
-        branch-suffix: timestamp
+        #branch-suffix: timestamp
