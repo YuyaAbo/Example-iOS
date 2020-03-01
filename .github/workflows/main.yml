@@ -9,6 +9,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
     - name: Switch Xcode version
       run: sudo xcode-select -s /Applications/Xcode_11.app
     - name: Update CocoaPods dependences
@@ -20,4 +22,4 @@ jobs:
         title: 'Update CocoaPods dependences'
         base: master
         branch: update-cocoapods-
-        #branch-suffix: timestamp
+        branch-suffix: timestamp

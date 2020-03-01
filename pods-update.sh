@@ -1,7 +1,5 @@
 #!/bin/sh
 
-git checkout origin/master
-
 pod update
 
 if [[ `git status --porcelain --untracked-files=no` ]]; 
