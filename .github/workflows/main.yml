@@ -1,4 +1,4 @@
-name: Update CocoaPods
+name: Create PR of update dependencies
 
 on: [push]
 
@@ -13,13 +13,12 @@ jobs:
         fetch-depth: 0
     - name: Switch Xcode version
       run: sudo xcode-select -s /Applications/Xcode_11.app
-    - name: Update CocoaPods dependences
-      run: sh pods-update.sh
+    - name: Update dependencies
+      run: |
+        pod update
+        carthage update --platform iOS
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        title: 'Update CocoaPods dependences'
-        base: master
-        branch: update-cocoapods
-        branch-suffix: timestamp
+        title: 'Update dependencies'
